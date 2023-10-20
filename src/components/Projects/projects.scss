@@ -1,0 +1,109 @@
+@import '../../app.scss';
+
+.projects {
+  position: relative;
+
+  .progress {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    text-align: center;
+    color: orange;
+    font-size: 36px;
+
+    @include mobile {
+      font-size: 20px;
+    }
+
+    h1 {
+      position: relative;
+      z-index: 50;
+    }
+
+    .progress-bar {
+      height: 10px;
+      background-color: white;
+    }
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    @include mobile {
+      padding-top: 40px;
+    }
+    .wrapper {
+      max-width: 1366px;
+      height: 100%;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+      overflow: hidden;
+
+      @include mobile {
+        flex-direction: column;
+        padding: 15px;
+      }
+    }
+    .image-container {
+      flex: 1;
+      height: 50%;
+
+      @include mobile {
+        width: 100%;
+        max-height: 300px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        @include mobile {
+          object-fit: contain;
+        }
+      }
+    }
+    .text-container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      flex: 1;
+      overflow: hidden;
+      @include mobile {
+        text-align: center;
+        transform: none !important;
+      }
+      h2 {
+        font-size: 52px;
+
+        @include mobile {
+          font-size: 40px;
+        }
+      }
+      p {
+        color: gray;
+        font-size: 20px;
+        @include mobile {
+          font-size: 16px;
+        }
+      }
+      a {
+        button {
+          border-radius: 10px;
+          background-color: orange;
+          border: none;
+          padding: 10px;
+          width: 150px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
