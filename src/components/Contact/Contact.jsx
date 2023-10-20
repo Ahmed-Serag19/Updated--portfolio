@@ -79,8 +79,13 @@ const Contact = () => {
         <motion.div
           className="coffee-svg"
           initial={{ opacity: 1 }}
-          whileInView={{ opacity: 0 }}
-          transition={{ delay: 3, duration: 1 }}
+          whileInView={{
+            opacity: 0,
+            position: 'absolute',
+            top: 500,
+            left: 0,
+          }}
+          transition={{ delay: 4, duration: 1 }}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
