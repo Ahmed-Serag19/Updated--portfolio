@@ -145,7 +145,7 @@ const About = () => {
           whileInView="animate"
         >
           <Button
-            link="https://drive.google.com/file/d/1_Zf2xdk93t_4dpad4ORWNiMhSZi_wKo4/view"
+            link="https://drive.google.com/file/d/1zfZqOFCrB2y-BYsXZN04pXlF4o9S9k9C/view?usp=sharing"
             inline="Download C.v"
           />
         </motion.span>
