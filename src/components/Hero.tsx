@@ -76,7 +76,7 @@ export default function Hero() {
         <motion.div {...fade(0.2)} className="relative hidden md:block">
           <div className="absolute inset-0 -z-10 translate-x-3 translate-y-3 rounded-[2rem] border border-accent/30" />
           <div className="h-72 w-60 overflow-hidden rounded-[2rem] border border-line bg-gradient-to-b from-panel-2 to-panel lg:h-80 lg:w-64">
-            <img src="/avatar.png" alt="Ahmed Mohamed" className="h-full w-full object-cover object-top" width={472} height={529} />
+            <img src="/avatar.webp" alt="Ahmed Mohamed" className="h-full w-full object-cover object-top" width={800} height={1000} />
           </div>
         </motion.div>
       </div>
