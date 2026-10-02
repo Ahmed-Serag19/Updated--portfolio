@@ -28,6 +28,23 @@ const stackLucidya = ['React 19', 'Vite', 'TypeScript', 'MUI v7', 'React Hook Fo
 
 export const content = {
   en: {
+    palette: {
+      open: 'Search or jump to...',
+      menu: 'Menu',
+      placeholder: 'Type a command or search...',
+      navigate: 'Navigate',
+      actions: 'Actions',
+      top: 'Back to top',
+      skills: 'Toolbox',
+      reviews: 'Client feedback',
+      switchLang: 'Switch to Arabic',
+      copyEmail: 'Copy email address',
+      copied: 'Copied!',
+      empty: 'No results',
+      hint: 'to navigate',
+      select: 'to select',
+      close: 'to close',
+    },
     nav: { work: 'Work', services: 'Services', experience: 'Experience', contact: 'Contact', cv: 'CV' },
     hero: {
       eyebrow: 'Frontend Engineer',
@@ -232,6 +249,23 @@ export const content = {
   },
 
   ar: {
+    palette: {
+      open: 'ابحث أو انتقل إلى...',
+      menu: 'القائمة',
+      placeholder: 'اكتب أمرًا أو ابحث...',
+      navigate: 'التنقل',
+      actions: 'إجراءات',
+      top: 'العودة للأعلى',
+      skills: 'الأدوات',
+      reviews: 'آراء العملاء',
+      switchLang: 'Switch to English',
+      copyEmail: 'نسخ البريد الإلكتروني',
+      copied: 'تم النسخ!',
+      empty: 'لا توجد نتائج',
+      hint: 'للتنقل',
+      select: 'للاختيار',
+      close: 'للإغلاق',
+    },
     nav: { work: 'أعمالي', services: 'الخدمات', experience: 'الخبرات', contact: 'تواصل', cv: 'السيرة الذاتية' },
     hero: {
       eyebrow: 'مطوّر واجهات أمامية',

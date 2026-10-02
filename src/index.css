@@ -11,6 +11,7 @@
   --color-accent-soft: rgb(255 122 69 / 0.12);
   --font-sans: 'Inter', 'IBM Plex Sans Arabic', system-ui, sans-serif;
   --font-display: 'Space Grotesk', 'IBM Plex Sans Arabic', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
 }
 
 html {
