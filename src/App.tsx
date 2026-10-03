@@ -7,6 +7,7 @@ import Skills from './components/Skills'
 import Reviews from './components/Reviews'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import CvViewer from './components/CvViewer'
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
+      <CvViewer />
     </>
   )
 }

@@ -28,6 +28,7 @@ const stackLucidya = ['React 19', 'Vite', 'TypeScript', 'MUI v7', 'React Hook Fo
 
 export const content = {
   en: {
+    cvViewer: { view: 'View CV', save: 'Save as PDF', close: 'Close', title: 'Curriculum Vitae' },
     palette: {
       open: 'Search or jump to...',
       menu: 'Menu',
@@ -55,7 +56,7 @@ export const content = {
       upwork: 'Hire me on Upwork',
       available: 'Available for freelance work',
       stats: [
-        { value: '3+', label: 'years shipping production React' },
+        { value: '4+', label: 'years shipping production React' },
         { value: '100%', label: 'Job Success on Upwork' },
         { value: '5.0', label: 'average client rating' },
         { value: 'EN / AR', label: 'interfaces with full RTL' },
@@ -243,12 +244,12 @@ export const content = {
       upworkSub: 'Send me your Figma, your repo or just the idea on Upwork. I usually reply within a few hours.',
       email: 'Email me',
       whatsapp: 'WhatsApp',
-      cv: 'Download CV',
     },
     footer: 'Built with React, TypeScript and Tailwind CSS.',
   },
 
   ar: {
+    cvViewer: { view: 'عرض السيرة الذاتية', save: 'حفظ كـ PDF', close: 'إغلاق', title: 'السيرة الذاتية' },
     palette: {
       open: 'ابحث أو انتقل إلى...',
       menu: 'القائمة',
@@ -276,7 +277,7 @@ export const content = {
       upwork: 'وظّفني على Upwork',
       available: 'متاح لمشاريع العمل الحر',
       stats: [
-        { value: '+3', label: 'سنوات في تطوير React لمنتجات حقيقية' },
+        { value: '+4', label: 'سنوات في تطوير React لمنتجات حقيقية' },
         { value: '100%', label: 'نسبة نجاح المشاريع على Upwork' },
         { value: '5.0', label: 'متوسط تقييم العملاء' },
         { value: 'AR / EN', label: 'واجهات بدعم كامل لـ RTL' },
@@ -464,7 +465,6 @@ export const content = {
       upworkSub: 'ابعتلي تصميم Figma أو الـ repo أو حتى الفكرة على Upwork. عادةً بردّ خلال ساعات قليلة.',
       email: 'راسلني',
       whatsapp: 'واتساب',
-      cv: 'تحميل السيرة الذاتية',
     },
     footer: 'مبني باستخدام React و TypeScript و Tailwind CSS.',
   },

@@ -1,16 +1,16 @@
 // Two builds from one codebase:
-//   npm run build          -> public site with contact details and CV
+//   npm run build          -> public site with contact details
 //   npm run build:upwork   -> Upwork-safe site, no direct contact details
 export const isUpwork = import.meta.env.VITE_VARIANT === 'upwork'
 
 // Contact details are compiled out of the Upwork build entirely, not just hidden.
 const contact = isUpwork
-  ? { linkedin: '', email: '', whatsapp: '', cv: '' }
+  ? { linkedin: '', email: '', whatsapp: '', phone: '' }
   : {
       linkedin: 'https://www.linkedin.com/in/ahmed-mohamed-amin-41b081186',
       email: 'mailto:ahmedmohamed.amin@hotmail.com',
       whatsapp: 'https://wa.me/201001386765',
-      cv: '/Ahmed_Mohamed_Frontend_Developer.pdf',
+      phone: '+20 100 138 6765',
     }
 
 export const links = {
@@ -18,3 +18,5 @@ export const links = {
   github: 'https://github.com/Ahmed-Serag19',
   ...contact,
 }
+
+export const openCv = () => window.dispatchEvent(new Event('cv:open'))

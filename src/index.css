@@ -50,3 +50,41 @@ body {
     scroll-behavior: auto;
   }
 }
+
+/* Printing from the CV viewer prints only the CV page. */
+@media print {
+  @page {
+    size: A4;
+    margin: 12mm;
+  }
+  body.cv-open {
+    background: white;
+    overflow: visible !important;
+  }
+  body.cv-open #root > *:not(.cv-overlay) {
+    display: none !important;
+  }
+  body.cv-open .cv-overlay {
+    position: static !important;
+    overflow: visible !important;
+    background: none !important;
+    backdrop-filter: none !important;
+  }
+  body.cv-open .cv-overlay > div {
+    padding: 0 !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+  body.cv-open .cv-toolbar {
+    display: none !important;
+  }
+  body.cv-open #cv-page {
+    max-width: none;
+    padding: 0;
+    box-shadow: none;
+    font-size: 10.5pt;
+  }
+  body.cv-open #cv-page a {
+    text-decoration: none;
+  }
+}

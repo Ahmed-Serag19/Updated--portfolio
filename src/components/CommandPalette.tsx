@@ -4,7 +4,7 @@ import {
   ArrowUp,
   Briefcase,
   CornerDownLeft,
-  Download,
+  FileText,
   ExternalLink,
   FolderKanban,
   Languages,
@@ -15,7 +15,7 @@ import {
   Wrench,
 } from 'lucide-react'
 import { useLang } from '../i18n/LangContext'
-import { isUpwork, links } from '../site'
+import { isUpwork, links, openCv } from '../site'
 import { GithubIcon, LinkedinIcon } from './icons'
 
 type Command = { id: string; group: 'nav' | 'action'; label: string; hint?: string; icon: ReactNode; run: () => void }
@@ -48,6 +48,7 @@ export default function CommandPalette({ open, onClose }: { open: boolean; onClo
     const open = (url: string) => () => window.open(url, '_blank', 'noopener')
     const actions: Command[] = [
       { id: 'lang', group: 'action', label: p.switchLang, hint: lang === 'en' ? 'AR' : 'EN', icon: <Languages size={16} />, run: toggle },
+      { id: 'cv', group: 'action', label: t.cvViewer.view, hint: 'cv', icon: <FileText size={16} />, run: openCv },
       { id: 'github', group: 'action', label: 'GitHub', hint: '@Ahmed-Serag19', icon: <GithubIcon size={16} />, run: open(links.github) },
     ]
     if (isUpwork) {
@@ -66,7 +67,6 @@ export default function CommandPalette({ open, onClose }: { open: boolean; onClo
           },
         },
         { id: 'linkedin', group: 'action', label: 'LinkedIn', icon: <LinkedinIcon size={15} />, run: open(links.linkedin) },
-        { id: 'cv', group: 'action', label: t.contact.cv, hint: 'PDF', icon: <Download size={16} />, run: open(links.cv) },
       )
     }
     return [...nav, ...actions]

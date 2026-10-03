@@ -1,6 +1,6 @@
-import { ArrowUpRight, Download, Mail, MessageCircle } from 'lucide-react'
+import { ArrowUpRight, FileText, Mail, MessageCircle } from 'lucide-react'
 import { useLang } from '../i18n/LangContext'
-import { isUpwork, links } from '../site'
+import { isUpwork, links, openCv } from '../site'
 import { GithubIcon, LinkedinIcon } from './icons'
 import { Reveal } from './ui'
 
@@ -26,6 +26,9 @@ export default function Contact() {
                 <a href={links.upwork} target="_blank" rel="noreferrer" className={`${btn} border-transparent bg-accent text-ink hover:border-transparent`}>
                   {t.hero.upwork} <ArrowUpRight size={17} />
                 </a>
+                <button onClick={openCv} className={btn}>
+                  <FileText size={17} /> {t.cvViewer.view}
+                </button>
                 <a href={links.github} target="_blank" rel="noreferrer" className={btn}>
                   <GithubIcon size={17} /> GitHub
                 </a>
@@ -44,9 +47,9 @@ export default function Contact() {
                 <a href={links.github} target="_blank" rel="noreferrer" className={btn}>
                   <GithubIcon size={17} /> GitHub
                 </a>
-                <a href={links.cv} download className={btn}>
-                  <Download size={17} /> {c.cv}
-                </a>
+                <button onClick={openCv} className={btn}>
+                  <FileText size={17} /> {t.cvViewer.view}
+                </button>
               </>
             )}
           </div>

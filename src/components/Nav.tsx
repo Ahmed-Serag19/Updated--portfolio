@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { AnimatePresence, motion, useScroll, useSpring } from 'motion/react'
 import { Command, Languages, Menu } from 'lucide-react'
 import { useLang } from '../i18n/LangContext'
-import { isUpwork, links } from '../site'
+import { openCv } from '../site'
 import { useActiveSection, type SectionId } from '../hooks/useActiveSection'
 import CommandPalette from './CommandPalette'
 
@@ -126,15 +126,12 @@ export default function Nav() {
               <Languages size={15} />
               {lang === 'en' ? 'عربي' : 'EN'}
             </button>
-            {!isUpwork && (
-              <a
-                href={links.cv}
-                download
-                className="hidden h-9 items-center rounded-full bg-fg px-4 text-sm font-medium text-ink transition-opacity hover:opacity-90 md:inline-flex"
-              >
-                {t.nav.cv}
-              </a>
-            )}
+            <button
+              onClick={openCv}
+              className="hidden h-9 items-center rounded-full bg-fg px-4 text-sm font-medium text-ink transition-opacity hover:opacity-90 md:inline-flex"
+            >
+              {t.nav.cv}
+            </button>
             <button
               onClick={() => setPaletteOpen(true)}
               className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-fg text-ink sm:hidden"
