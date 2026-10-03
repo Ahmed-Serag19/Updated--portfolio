@@ -15,7 +15,7 @@ function H({ children }: { children: string }) {
 
 // A document-style CV built from data, so it is always current and the Upwork
 // build shows no contact details.
-function CvPage() {
+export function CvPage({ printable = false }: { printable?: boolean }) {
   const contact = isUpwork
     ? [
         { label: cv.location },
@@ -32,7 +32,7 @@ function CvPage() {
 
   return (
     <article
-      id="cv-page"
+      id={printable ? 'cv-page' : undefined}
       dir="ltr"
       lang="en"
       className="mx-auto w-full max-w-[820px] bg-white px-6 py-8 font-sans text-[12.5px] leading-relaxed text-neutral-700 shadow-2xl sm:px-12 sm:py-12"
@@ -122,8 +122,17 @@ export default function CvViewer() {
 
   useEffect(() => {
     const onOpen = () => setOpen(true)
+    // Printing needs the viewer open, since print styles only show the overlay's page.
+    const onPrint = () => {
+      setOpen(true)
+      setTimeout(() => window.print(), 450)
+    }
     window.addEventListener('cv:open', onOpen)
-    return () => window.removeEventListener('cv:open', onOpen)
+    window.addEventListener('cv:print', onPrint)
+    return () => {
+      window.removeEventListener('cv:open', onOpen)
+      window.removeEventListener('cv:print', onPrint)
+    }
   }, [])
 
   useEffect(() => {
@@ -185,7 +194,7 @@ export default function CvViewer() {
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
           >
             <div onMouseDown={(e) => e.stopPropagation()}>
-              <CvPage />
+              <CvPage printable />
             </div>
           </motion.div>
         </motion.div>

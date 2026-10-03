@@ -42,13 +42,14 @@ export default function CommandPalette({ open, onClose }: { open: boolean; onClo
       { id: 'experience', label: t.nav.experience, hint: '~/experience', icon: <Briefcase size={16} /> },
       { id: 'skills', label: p.skills, hint: '~/skills', icon: <Wrench size={16} /> },
       { id: 'reviews', label: p.reviews, hint: '~/reviews', icon: <MessageSquareQuote size={16} /> },
+      { id: 'cv', label: t.resume.kicker, hint: '~/cv', icon: <FileText size={16} /> },
       { id: 'contact', label: t.nav.contact, hint: '~/contact', icon: <Mail size={16} /> },
     ].map((c) => ({ ...c, group: 'nav' as const, run: () => scrollTo(c.id) }))
 
     const open = (url: string) => () => window.open(url, '_blank', 'noopener')
     const actions: Command[] = [
       { id: 'lang', group: 'action', label: p.switchLang, hint: lang === 'en' ? 'AR' : 'EN', icon: <Languages size={16} />, run: toggle },
-      { id: 'cv', group: 'action', label: t.cvViewer.view, hint: 'cv', icon: <FileText size={16} />, run: openCv },
+      { id: 'cv-full', group: 'action', label: t.cvViewer.view, hint: t.cvViewer.full, icon: <FileText size={16} />, run: openCv },
       { id: 'github', group: 'action', label: 'GitHub', hint: '@Ahmed-Serag19', icon: <GithubIcon size={16} />, run: open(links.github) },
     ]
     if (isUpwork) {

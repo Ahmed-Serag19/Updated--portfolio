@@ -39,7 +39,12 @@ const stackLucidya = ['React 19', 'Vite', 'TypeScript', 'MUI v7', 'React Hook Fo
 
 export const content = {
   en: {
-    cvViewer: { view: 'View CV', save: 'Save as PDF', close: 'Close', title: 'Curriculum Vitae' },
+    cvViewer: { view: 'View CV', save: 'Save as PDF', close: 'Close', title: 'Curriculum Vitae', full: 'Full screen' },
+    resume: {
+      kicker: 'CV',
+      title: 'Read my CV right here',
+      sub: 'No download needed. Scroll through it below, open it full screen, or save it as a PDF.',
+    },
     palette: {
       open: 'Search or jump to...',
       menu: 'Menu',
@@ -163,8 +168,8 @@ export const content = {
           id: 'mehna',
           title: 'Mehna',
           tag: 'Client work',
-          text: 'Services marketplace connecting customers with professionals: customer web app, provider portal and admin dashboard with bookings, real-time chat and maps, in Arabic and English.',
-          stack: ['React', 'TypeScript', 'React Query', 'WebSockets', 'shadcn/ui'],
+          text: 'Services marketplace connecting customers with professionals: customer web app, provider portal, admin dashboard and a React Native mobile app, with bookings, real-time chat and maps in Arabic and English.',
+          stack: ['React', 'React Native', 'TypeScript', 'React Query', 'WebSockets'],
           closed: true,
         },
         {
@@ -268,7 +273,12 @@ export const content = {
   },
 
   ar: {
-    cvViewer: { view: 'عرض السيرة الذاتية', save: 'حفظ كـ PDF', close: 'إغلاق', title: 'السيرة الذاتية' },
+    cvViewer: { view: 'عرض السيرة الذاتية', save: 'حفظ كـ PDF', close: 'إغلاق', title: 'السيرة الذاتية', full: 'ملء الشاشة' },
+    resume: {
+      kicker: 'السيرة الذاتية',
+      title: 'اقرأ سيرتي الذاتية هنا',
+      sub: 'بدون تحميل. تصفّحها هنا، افتحها بملء الشاشة أو احفظها كـ PDF.',
+    },
     palette: {
       open: 'ابحث أو انتقل إلى...',
       menu: 'القائمة',
@@ -392,8 +402,8 @@ export const content = {
           id: 'mehna',
           title: 'مهنة',
           tag: 'مشروع لعميل',
-          text: 'منصة خدمات تربط العملاء بأصحاب المهن: تطبيق ويب للعملاء، بوابة لمقدمي الخدمة ولوحة تحكم للإدارة، مع حجوزات ومحادثة لحظية وخرائط بالعربي والإنجليزي.',
-          stack: ['React', 'TypeScript', 'React Query', 'WebSockets', 'shadcn/ui'],
+          text: 'منصة خدمات تربط العملاء بأصحاب المهن: تطبيق ويب للعملاء، بوابة لمقدمي الخدمة، لوحة تحكم للإدارة وتطبيق جوال بـ React Native، مع حجوزات ومحادثة لحظية وخرائط بالعربي والإنجليزي.',
+          stack: ['React', 'React Native', 'TypeScript', 'React Query', 'WebSockets'],
           closed: true,
         },
         {

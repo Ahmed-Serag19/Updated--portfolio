@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-export const SECTIONS = ['work', 'services', 'experience', 'skills', 'reviews', 'contact'] as const
+export const SECTIONS = ['work', 'services', 'experience', 'skills', 'reviews', 'cv', 'contact'] as const
 export type SectionId = (typeof SECTIONS)[number]
 
 // Returns the section currently under the top third of the viewport ('' while in the hero).

@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import { AnimatePresence, motion, useScroll, useSpring } from 'motion/react'
 import { Command, Languages, Menu } from 'lucide-react'
 import { useLang } from '../i18n/LangContext'
-import { openCv } from '../site'
 import { useActiveSection, type SectionId } from '../hooks/useActiveSection'
 import CommandPalette from './CommandPalette'
 
@@ -13,6 +12,7 @@ const linkFor: Record<SectionId, string> = {
   experience: 'experience',
   skills: 'experience',
   reviews: 'experience',
+  cv: '',
   contact: 'contact',
 }
 
@@ -126,12 +126,15 @@ export default function Nav() {
               <Languages size={15} />
               {lang === 'en' ? 'عربي' : 'EN'}
             </button>
-            <button
-              onClick={openCv}
-              className="hidden h-9 items-center rounded-full bg-fg px-4 text-sm font-medium text-ink transition-opacity hover:opacity-90 md:inline-flex"
+            <a
+              href="#cv"
+              aria-current={active === 'cv' ? 'true' : undefined}
+              className={`hidden h-9 items-center rounded-full px-4 text-sm font-medium transition-colors md:inline-flex ${
+                active === 'cv' ? 'bg-accent text-ink' : 'bg-fg text-ink hover:opacity-90'
+              }`}
             >
               {t.nav.cv}
-            </button>
+            </a>
             <button
               onClick={() => setPaletteOpen(true)}
               className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-fg text-ink sm:hidden"

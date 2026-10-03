@@ -20,3 +20,4 @@ export const links = {
 }
 
 export const openCv = () => window.dispatchEvent(new Event('cv:open'))
+export const printCv = () => window.dispatchEvent(new Event('cv:print'))
