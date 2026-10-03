@@ -5,7 +5,7 @@ export const cv = {
   title: 'Frontend Engineer · React & Next.js',
   location: 'Giza, Egypt',
   summary:
-    'Frontend Engineer with 4+ years building production React and Next.js applications across AI, SaaS and enterprise platforms. Currently building core features of a React 19 + Vite platform for configuring AI chat agents. Consistent track record of improving performance by 30 to 60%, delivering bilingual RTL interfaces, and integrating complex API-driven workflows at scale.',
+    'Frontend Engineer with 4+ years building production React and Next.js applications across AI, SaaS and enterprise platforms. Currently part of the team building a React 19 + Vite platform for configuring AI chat agents. Consistent track record of improving performance by 30 to 60%, delivering bilingual RTL interfaces, and integrating complex API-driven workflows at scale.',
   experience: [
     {
       company: 'Lucidya',
@@ -13,12 +13,12 @@ export const cv = {
       meta: 'Full-time, Remote · Jeddah, Saudi Arabia',
       period: 'Jan 2026 - Present',
       points: [
-        'Engineer core frontend features for a React 19 + Vite SPA powering an AI chat-agent configuration platform: agent identity, guardrails, knowledge sources, webhooks, human handoff flows and audit logs, end to end.',
-        'Built a token-based design system of 23+ reusable MUI components (DataTable, DateRangePicker, multi-select and more) used across all 23 feature pages, enforcing consistent theming and cutting per-feature UI build time.',
+        'Build core frontend features, as part of a cross-functional squad, for a React 19 + Vite SPA powering an AI chat-agent configuration platform: agent identity, guardrails, knowledge sources, webhooks, human handoff flows and audit logs.',
+        'Built a token-based design system of 23+ reusable MUI components (DataTable, DateRangePicker, multi-select and more) that the team uses across all 23 feature pages, keeping theming consistent and speeding up feature work for everyone.',
         'Delivered full bilingual support (English/Arabic) with RTL layout switching, directional icon mirroring and CLDR-compliant plural rules.',
         'Implemented route-level code splitting, lazy loading with chunk-retry fallbacks and image optimization, reducing total asset size by 60% and eliminating post-deploy stale-chunk errors.',
         'Standardized form architecture across 15+ complex flows using React Hook Form and Zod, unifying validation, error handling and API submission patterns.',
-        'Write Vitest and React Testing Library tests for shared components and critical flows; ship in agile sprints through pull requests, code reviews and Bitbucket Pipelines CI.',
+        'Write Vitest and React Testing Library tests for shared components and critical flows; collaborate with backend, design and QA in agile sprints through pull requests, code reviews and Bitbucket Pipelines CI.',
       ],
     },
     {
@@ -56,10 +56,10 @@ export const cv = {
     { label: 'APIs & Practices', value: 'REST, WebSockets, JWT auth, i18next (RTL/LTR), Agile/Scrum, code review, CI/CD' },
   ],
   projects: [
+    { name: 'D-Wash (client)', stack: 'React, TypeScript, Tailwind CSS, i18next', text: 'Bilingual car wash platform with customer, admin and provider portals: booking, payments, discount codes, real-time chat and map location picking. Rated 5.0 by the client.' },
+    { name: 'Mehna (client)', stack: 'React, TypeScript, React Query, WebSockets, shadcn/ui', text: 'Services marketplace with customer web app, provider portal and admin dashboard: bookings, real-time chat and maps, in Arabic and English.' },
     { name: 'Lamo2a5za Seafood', stack: 'Next.js, TypeScript, Tailwind CSS', text: 'Arabic-first landing page for a Cairo seafood brand with menu, reviews, branches and one-tap delivery ordering.' },
     { name: 'Casa Colina, Abkhazia', stack: 'Next.js, TypeScript, i18n', text: 'Editorial travel site for stays, car rental and local experiences in Russian, English and Arabic, with an admin dashboard.' },
-    { name: 'The Wild Oasis', stack: 'Next.js 14, Supabase, NextAuth.js', text: 'Full-stack cabin booking platform with live availability, OAuth sign-in and optimistic UI via Server Actions.' },
-    { name: 'Parking Reservation System', stack: 'React, TypeScript, Zustand, React Query', text: 'Gate, employee and admin interfaces with real-time zone availability over WebSockets and type-safe forms.' },
   ],
   education: { school: 'Modern Academy, Maadi, Cairo', degree: 'Bachelor of Science in Computer Science' },
   languages: 'Arabic (native), English (fluent)',

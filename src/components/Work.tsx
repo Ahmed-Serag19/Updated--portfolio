@@ -1,7 +1,7 @@
-import { ArrowUpRight, Lock } from 'lucide-react'
+import { ArrowUpRight, CircleSlash, Lock } from 'lucide-react'
 import { GithubIcon } from './icons'
 import { useLang } from '../i18n/LangContext'
-import type { Project } from '../i18n/content'
+import type { MoreItem, Project } from '../i18n/content'
 import { Chip, Reveal, Section } from './ui'
 import LucidyaMock from './LucidyaMock'
 
@@ -97,6 +97,43 @@ function ProjectRow({ project, index }: { project: Project; index: number }) {
   )
 }
 
+function MoreCard({ item }: { item: MoreItem }) {
+  const { t } = useLang()
+  return (
+    <div className="flex h-full flex-col rounded-2xl border border-line bg-panel p-6 transition-colors hover:border-white/15">
+      <div className="flex flex-wrap items-center gap-2">
+        <span className="rounded-full border border-line px-2.5 py-0.5 text-xs text-muted">{item.tag}</span>
+        {item.closed && (
+          <span className="inline-flex items-center gap-1 text-xs text-muted/70">
+            <CircleSlash size={12} /> {t.more.closed}
+          </span>
+        )}
+      </div>
+      <h4 className="mt-4 font-display text-lg font-semibold">{item.title}</h4>
+      <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">{item.text}</p>
+      <div className="mt-4 flex flex-wrap gap-1.5" dir="ltr">
+        {item.stack.map((s) => (
+          <Chip key={s}>{s}</Chip>
+        ))}
+      </div>
+      {(item.live || item.code) && (
+        <div className="mt-5 flex gap-5 text-sm font-medium">
+          {item.live && (
+            <a href={item.live} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 hover:text-accent">
+              {t.work.live} <ArrowUpRight size={15} />
+            </a>
+          )}
+          {item.code && (
+            <a href={item.code} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-muted hover:text-fg">
+              <GithubIcon size={15} /> {t.work.code}
+            </a>
+          )}
+        </div>
+      )}
+    </div>
+  )
+}
+
 export default function Work() {
   const { t } = useLang()
   return (
@@ -105,6 +142,20 @@ export default function Work() {
         {t.projects.map((p, i) => (
           <ProjectRow key={p.id} project={p} index={i} />
         ))}
+      </div>
+
+      <div className="mt-28 md:mt-36">
+        <Reveal>
+          <p className="mb-2 text-sm font-medium text-accent">{t.more.kicker}</p>
+          <h3 className="font-display text-2xl font-semibold tracking-tight">{t.more.title}</h3>
+        </Reveal>
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {t.more.items.map((item, i) => (
+            <Reveal key={item.id} delay={i * 0.05} className="h-full">
+              <MoreCard item={item} />
+            </Reveal>
+          ))}
+        </div>
       </div>
     </Section>
   )

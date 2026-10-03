@@ -15,6 +15,17 @@ export type Project = {
   note?: string
 }
 
+export type MoreItem = {
+  id: string
+  title: string
+  tag: string
+  text: string
+  stack: string[]
+  closed?: boolean
+  live?: string
+  code?: string
+}
+
 export type Job = {
   company: string
   role: string
@@ -54,7 +65,7 @@ export const content = {
       primary: 'See my work',
       contact: 'Get in touch',
       upwork: 'Hire me on Upwork',
-      available: 'Available for freelance work',
+      available: 'Available for freelance · ~20 hrs/week',
       stats: [
         { value: '4+', label: 'years shipping production React' },
         { value: '100%', label: 'Job Success on Upwork' },
@@ -134,39 +145,47 @@ export const content = {
         live: 'https://abkhazia-travel.vercel.app',
         badge: 'In progress',
       },
-      {
-        id: 'oasis',
-        title: 'The Wild Oasis',
-        meta: 'Full-stack · Next.js 14 · Supabase',
-        summary:
-          'Booking platform for a luxury cabin hotel: live availability, Google sign-in, and reservations managed with Server Actions and optimistic UI.',
-        highlights: [
-          'Server Components and Server Actions for data and mutations',
-          'OAuth authentication with NextAuth',
-          'Date-range booking with live availability',
-        ],
-        stack: ['Next.js 14', 'Supabase', 'NextAuth.js', 'Tailwind CSS'],
-        image: '/projects/oasis.webp',
-        mobile: '/projects/oasis-m.webp',
-        live: 'https://the-wild-oasis-cx.vercel.app/',
-        code: 'https://github.com/Ahmed-Serag19/the-wild-oasis-customer',
-      },
-      {
-        id: 'parking',
-        title: 'Parking Reservation System',
-        meta: 'Real-time · React · TypeScript',
-        summary:
-          'Gate, checkpoint and admin interfaces for a parking operator, with live zone availability over WebSockets and type-safe forms.',
-        highlights: [
-          'Real-time zone and admin updates over WebSockets',
-          'Role-based screens for gates, employees and admins',
-          'Tested with Vitest and React Testing Library',
-        ],
-        stack: ['React 18', 'TypeScript', 'Zustand', 'React Query', 'Zod', 'shadcn/ui'],
-        image: '/projects/parking-diagram.webp',
-        code: 'https://github.com/Ahmed-Serag19/parking-reservation-system',
-      },
     ] as Project[],
+    more: {
+      kicker: 'More work',
+      title: 'Also built',
+      closed: 'Product closed',
+      items: [
+        {
+          id: 'dwash',
+          title: 'D-Wash',
+          tag: 'Client work',
+          text: 'Bilingual car wash platform with customer, admin and provider portals: booking, payments, discount codes, real-time chat and map-based location picking. Rated 5.0 by the client.',
+          stack: ['React', 'TypeScript', 'Tailwind CSS', 'i18next'],
+          closed: true,
+        },
+        {
+          id: 'mehna',
+          title: 'Mehna',
+          tag: 'Client work',
+          text: 'Services marketplace connecting customers with professionals: customer web app, provider portal and admin dashboard with bookings, real-time chat and maps, in Arabic and English.',
+          stack: ['React', 'TypeScript', 'React Query', 'WebSockets', 'shadcn/ui'],
+          closed: true,
+        },
+        {
+          id: 'parking',
+          title: 'Parking Reservation System',
+          tag: 'Coding challenge',
+          text: 'Gate, checkpoint and admin screens with live zone availability over WebSockets and type-safe forms.',
+          stack: ['React', 'TypeScript', 'Zustand', 'React Query', 'Zod'],
+          code: 'https://github.com/Ahmed-Serag19/parking-reservation-system',
+        },
+        {
+          id: 'oasis',
+          title: 'The Wild Oasis',
+          tag: 'Personal project',
+          text: 'Cabin booking app built to practise the Next.js App Router: Server Actions, Supabase and Google sign-in.',
+          stack: ['Next.js 14', 'Supabase', 'NextAuth.js'],
+          live: 'https://the-wild-oasis-cx.vercel.app/',
+          code: 'https://github.com/Ahmed-Serag19/the-wild-oasis-customer',
+        },
+      ] as MoreItem[],
+    },
     services: {
       kicker: 'Services',
       title: 'How I can help',
@@ -187,9 +206,9 @@ export const content = {
           period: 'Jan 2026 - Present',
           place: 'Remote · Jeddah, Saudi Arabia',
           points: [
-            'Build core features of an AI chat-agent platform in React 19 and Vite',
-            'Created the shared design system and the bilingual EN/AR experience',
-            'Own performance, form architecture and tests for critical flows',
+            'Build core features of an AI chat-agent platform with a cross-functional squad (React 19, Vite)',
+            'Built the shared design system and the bilingual EN/AR experience used across the product',
+            'Drive performance, form architecture and tests for critical flows through PRs and code review',
           ],
         },
         {
@@ -240,8 +259,8 @@ export const content = {
     contact: {
       kicker: 'Contact',
       title: 'Have a project in mind?',
-      sub: 'Send me your Figma, your repo or just the idea. I usually reply within a few hours.',
-      upworkSub: 'Send me your Figma, your repo or just the idea on Upwork. I usually reply within a few hours.',
+      sub: 'Send me your Figma, your repo or just the idea. I take on around 20 hours of freelance work a week, with overlap for Gulf and European time zones, and usually reply within a few hours.',
+      upworkSub: 'Send me your Figma, your repo or just the idea on Upwork. I take on around 20 hours of freelance work a week, with overlap for Gulf and European time zones, and usually reply within a few hours.',
       email: 'Email me',
       whatsapp: 'WhatsApp',
     },
@@ -275,7 +294,7 @@ export const content = {
       primary: 'شاهد أعمالي',
       contact: 'تواصل معي',
       upwork: 'وظّفني على Upwork',
-      available: 'متاح لمشاريع العمل الحر',
+      available: 'متاح للعمل الحر · حوالي 20 ساعة أسبوعيًا',
       stats: [
         { value: '+4', label: 'سنوات في تطوير React لمنتجات حقيقية' },
         { value: '100%', label: 'نسبة نجاح المشاريع على Upwork' },
@@ -355,39 +374,47 @@ export const content = {
         live: 'https://abkhazia-travel.vercel.app',
         badge: 'قيد التطوير',
       },
-      {
-        id: 'oasis',
-        title: 'The Wild Oasis',
-        meta: 'Full-stack · Next.js 14 · Supabase',
-        summary:
-          'منصة حجز لفندق أكواخ فاخر: توفر لحظي للمواعيد، تسجيل دخول بجوجل، وإدارة الحجوزات عبر Server Actions مع تحديث فوري للواجهة.',
-        highlights: [
-          'استخدام Server Components و Server Actions للبيانات والتعديلات',
-          'تسجيل دخول OAuth عبر NextAuth',
-          'حجز بنطاق تواريخ مع عرض التوفر لحظيًا',
-        ],
-        stack: ['Next.js 14', 'Supabase', 'NextAuth.js', 'Tailwind CSS'],
-        image: '/projects/oasis.webp',
-        mobile: '/projects/oasis-m.webp',
-        live: 'https://the-wild-oasis-cx.vercel.app/',
-        code: 'https://github.com/Ahmed-Serag19/the-wild-oasis-customer',
-      },
-      {
-        id: 'parking',
-        title: 'نظام حجز المواقف',
-        meta: 'لحظي · React · TypeScript',
-        summary:
-          'واجهات للبوابات ونقاط التفتيش ولوحة الإدارة لشركة مواقف سيارات، مع توفر المناطق لحظيًا عبر WebSockets ونماذج آمنة الأنواع.',
-        highlights: [
-          'تحديثات لحظية للمناطق والإدارة عبر WebSockets',
-          'شاشات حسب الصلاحية للبوابات والموظفين والمديرين',
-          'اختبارات باستخدام Vitest و React Testing Library',
-        ],
-        stack: ['React 18', 'TypeScript', 'Zustand', 'React Query', 'Zod', 'shadcn/ui'],
-        image: '/projects/parking-diagram.webp',
-        code: 'https://github.com/Ahmed-Serag19/parking-reservation-system',
-      },
     ] as Project[],
+    more: {
+      kicker: 'أعمال أخرى',
+      title: 'بنيت أيضًا',
+      closed: 'المنتج متوقف',
+      items: [
+        {
+          id: 'dwash',
+          title: 'D-Wash',
+          tag: 'مشروع لعميل',
+          text: 'منصة غسيل سيارات ثنائية اللغة ببوابات للعملاء والإدارة ومقدمي الخدمة: حجوزات، مدفوعات، أكواد خصم، محادثة لحظية واختيار الموقع على الخريطة. تقييم العميل 5.0.',
+          stack: ['React', 'TypeScript', 'Tailwind CSS', 'i18next'],
+          closed: true,
+        },
+        {
+          id: 'mehna',
+          title: 'مهنة',
+          tag: 'مشروع لعميل',
+          text: 'منصة خدمات تربط العملاء بأصحاب المهن: تطبيق ويب للعملاء، بوابة لمقدمي الخدمة ولوحة تحكم للإدارة، مع حجوزات ومحادثة لحظية وخرائط بالعربي والإنجليزي.',
+          stack: ['React', 'TypeScript', 'React Query', 'WebSockets', 'shadcn/ui'],
+          closed: true,
+        },
+        {
+          id: 'parking',
+          title: 'نظام حجز المواقف',
+          tag: 'تحدٍّ برمجي',
+          text: 'شاشات للبوابات ونقاط التفتيش والإدارة مع توفر المناطق لحظيًا عبر WebSockets ونماذج آمنة الأنواع.',
+          stack: ['React', 'TypeScript', 'Zustand', 'React Query', 'Zod'],
+          code: 'https://github.com/Ahmed-Serag19/parking-reservation-system',
+        },
+        {
+          id: 'oasis',
+          title: 'The Wild Oasis',
+          tag: 'مشروع شخصي',
+          text: 'تطبيق حجز أكواخ للتدريب على Next.js App Router: Server Actions و Supabase وتسجيل الدخول بجوجل.',
+          stack: ['Next.js 14', 'Supabase', 'NextAuth.js'],
+          live: 'https://the-wild-oasis-cx.vercel.app/',
+          code: 'https://github.com/Ahmed-Serag19/the-wild-oasis-customer',
+        },
+      ] as MoreItem[],
+    },
     services: {
       kicker: 'الخدمات',
       title: 'كيف أقدر أساعدك',
@@ -408,9 +435,9 @@ export const content = {
           period: 'يناير 2026 - الآن',
           place: 'عن بُعد · جدة، السعودية',
           points: [
-            'بناء الميزات الأساسية لمنصة وكلاء محادثة بالذكاء الاصطناعي باستخدام React 19 و Vite',
+            'بناء الميزات الأساسية لمنصة وكلاء محادثة بالذكاء الاصطناعي ضمن فريق متعدد التخصصات (React 19 و Vite)',
             'بناء نظام التصميم المشترك وتجربة العربي والإنجليزي',
-            'مسؤول عن الأداء وبنية النماذج والاختبارات للمسارات الحرجة',
+            'العمل على الأداء وبنية النماذج والاختبارات للمسارات الحرجة من خلال الـ PRs ومراجعة الكود',
           ],
         },
         {
@@ -461,8 +488,8 @@ export const content = {
     contact: {
       kicker: 'تواصل',
       title: 'عندك مشروع؟',
-      sub: 'ابعتلي تصميم Figma أو الـ repo أو حتى الفكرة بس. عادةً بردّ خلال ساعات قليلة.',
-      upworkSub: 'ابعتلي تصميم Figma أو الـ repo أو حتى الفكرة على Upwork. عادةً بردّ خلال ساعات قليلة.',
+      sub: 'ابعتلي تصميم Figma أو الـ repo أو حتى الفكرة بس. بشتغل حوالي 20 ساعة أسبوعيًا على مشاريع حرة بمواعيد تناسب الخليج وأوروبا، وعادةً بردّ خلال ساعات قليلة.',
+      upworkSub: 'ابعتلي تصميم Figma أو الـ repo أو حتى الفكرة على Upwork. بشتغل حوالي 20 ساعة أسبوعيًا على مشاريع حرة بمواعيد تناسب الخليج وأوروبا، وعادةً بردّ خلال ساعات قليلة.',
       email: 'راسلني',
       whatsapp: 'واتساب',
     },
