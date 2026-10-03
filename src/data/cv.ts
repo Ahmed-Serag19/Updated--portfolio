@@ -59,7 +59,7 @@ export const cv = {
     { name: 'D-Wash (client)', stack: 'React, TypeScript, Tailwind CSS, i18next', text: 'Bilingual car wash platform with customer, admin and provider portals: booking, payments, discount codes, real-time chat and map location picking. Rated 5.0 by the client.' },
     { name: 'Mehna (client)', stack: 'React, React Native, TypeScript, React Query, WebSockets', text: 'Services marketplace with customer web app, provider portal, admin dashboard and React Native mobile app: bookings, real-time chat and maps, in Arabic and English.' },
     { name: 'Lamo2a5za Seafood', stack: 'Next.js, TypeScript, Tailwind CSS', text: 'Arabic-first landing page for a Cairo seafood brand with menu, reviews, branches and one-tap delivery ordering.' },
-    { name: 'Casa Colina, Abkhazia', stack: 'Next.js, TypeScript, i18n', text: 'Editorial travel site for stays, car rental and local experiences in Russian, English and Arabic, with an admin dashboard.' },
+    { name: 'Casa Colina, Abkhazia', stack: 'Next.js, TypeScript, i18n', text: 'Editorial travel site for stays, car rental and local experiences in Russian, English and Abkhaz, with an admin dashboard.' },
   ],
   education: { school: 'Modern Academy, Maadi, Cairo', degree: 'Bachelor of Science in Computer Science' },
   languages: 'Arabic (native), English (fluent)',

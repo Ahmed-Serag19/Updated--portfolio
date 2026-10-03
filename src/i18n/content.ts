@@ -138,10 +138,10 @@ export const content = {
         title: 'Casa Colina, Abkhazia',
         meta: 'Travel & stays · Next.js · 3 languages',
         summary:
-          'Editorial travel site for stays, car rental and local experiences on the Black Sea coast, in Russian, English and Arabic, with its own admin dashboard.',
+          'Editorial travel site for stays, car rental and local experiences on the Black Sea coast, in Russian, English and Abkhaz, with its own admin dashboard.',
         highlights: [
           'Magazine-style design with large photography and calm typography',
-          'Three languages including a full RTL Arabic version',
+          'Three languages: Russian, English and Abkhaz',
           'Admin dashboard for listings and requests',
         ],
         stack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'i18n'],
@@ -372,10 +372,10 @@ export const content = {
         title: 'Casa Colina، أبخازيا',
         meta: 'سفر وإقامة · Next.js · 3 لغات',
         summary:
-          'موقع سفر بطابع مجلّات للإقامة وتأجير السيارات والتجارب المحلية على ساحل البحر الأسود، بالروسية والإنجليزية والعربية، مع لوحة تحكم خاصة.',
+          'موقع سفر بطابع مجلّات للإقامة وتأجير السيارات والتجارب المحلية على ساحل البحر الأسود، بالروسية والإنجليزية والأبخازية، مع لوحة تحكم خاصة.',
         highlights: [
           'تصميم بأسلوب المجلات مع صور كبيرة وخطوط هادئة',
-          'ثلاث لغات منها نسخة عربية كاملة بـ RTL',
+          'ثلاث لغات: الروسية والإنجليزية والأبخازية',
           'لوحة تحكم لإدارة العروض والطلبات',
         ],
         stack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'i18n'],
